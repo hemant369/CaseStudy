@@ -7,7 +7,7 @@ CREATE TABLE Incidents (
     Latitude DECIMAL(9,6),
     Longitude DECIMAL(9,6),
     Descriptions TEXT,
-    Statusof VARCHAR(50),
+    Status VARCHAR(50),
     VictimID INT ,
     SuspectID INT,
     FOREIGN KEY (VictimID) REFERENCES Victims(VictimID),
