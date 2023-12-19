@@ -29,11 +29,13 @@ CREATE TABLE Suspects (
     Gender CHAR(1),
     ContactInformation TEXT
 );
+CREATE TABLE LawEnforcementAgencies
  (
     AgencyID INT PRIMARY KEY,
     AgencyName VARCHAR(100),
     Jurisdiction VARCHAR(255),
-    ContactInformation TEXT
+    ContactInformation TEXT,
+    officers varchar(255)
 );
 CREATE TABLE Officers (
     OfficerID INT PRIMARY KEY,
@@ -44,7 +46,7 @@ CREATE TABLE Officers (
     ContactInformation TEXT,
     AgencyID INT,
     FOREIGN KEY (AgencyID) REFERENCES LawEnforcementAgencies(AgencyID)
-)
+);
 CREATE TABLE Evidence (
     EvidenceID INT PRIMARY KEY,
     Descriptions TEXT,
@@ -58,7 +60,7 @@ CREATE TABLE Reports (
     OfficerID INT,
     ReportDate varchar(255),
     ReportDetails TEXT,
-    Statusof VARCHAR(50),
+    Status VARCHAR(50),
     FOREIGN KEY (IncidentID) REFERENCES Incidents(IncidentID),
     FOREIGN KEY (OfficerID) REFERENCES Officers(OfficerID)
 );
