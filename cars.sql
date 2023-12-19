@@ -1,3 +1,4 @@
+create databse cars;
 use cars;
 
 CREATE TABLE Incidents (
