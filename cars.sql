@@ -1,4 +1,5 @@
-create databse cars;
+create database cars;
+
 use cars;
 
 CREATE TABLE Incidents (
